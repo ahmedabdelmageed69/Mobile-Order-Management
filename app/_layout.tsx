@@ -27,14 +27,6 @@ export default function RootLayout() {
     }
   }, [loaded]);
 
-  // useEffect(() => {
-  //   if (token) {
-  //     router.push("/(tabs)");
-  //   } else {
-  //     router.push("/(auth)/login");
-  //   }
-  // }, []);
-
   if (!loaded) {
     return null;
   }
@@ -45,6 +37,7 @@ export default function RootLayout() {
         <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="(auth)" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="order-details" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />
